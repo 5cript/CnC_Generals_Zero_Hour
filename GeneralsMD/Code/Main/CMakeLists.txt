@@ -7,6 +7,7 @@ target_link_directories(zerohour PRIVATE
 target_link_libraries(zerohour PRIVATE
     GameEngine
     GameEngineDevice  
+    BrowserDispatch
     winmm
     imm32
     dbghelp
@@ -52,7 +53,6 @@ target_include_directories(zerohour PRIVATE
 target_sources(zerohour PRIVATE
     WinMain.cpp
     WinMain.h
-    ../Libraries/Source/EABrowserDispatch/BrowserDispatch_i.c
 )
 
 if(WIN32 OR "${CMAKE_SYSTEM}" MATCHES "Windows")
